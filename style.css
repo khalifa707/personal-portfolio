@@ -161,3 +161,10 @@
 
     }
 }
+
+@layer utilities {
+
+    .text-header-color{
+        color: var(--colors-header-color);
+    }
+}
