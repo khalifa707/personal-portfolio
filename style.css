@@ -167,4 +167,13 @@
     .text-header-color{
         color: var(--colors-header-color);
     }
+    .text-header-span-color{
+        color: var(--colors-header-span-color);
+    }
+    .text-footer-color{
+        color: var(--colors-footer-text-color);
+    }
+    .text-list-color{
+        color: var(--colors-list-color);
+    }
 }
