@@ -162,6 +162,13 @@
         align-self: stretch;
         border-bottom: 1px solid var(--colors-primary-color-300);
     }
+    footer{
+        display: flex;
+        padding: clamp(var(--spacing-space-1), 1vw, var(--spacing-space-2));
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    }
 
 }
 @layer utilities {
