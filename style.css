@@ -11,6 +11,11 @@
         -moz-text-size-adjust: none;
         -webkit-text-size-adjust: none;
         text-size-adjust: none;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    ::-webkit-scrollbar {
+        display: none;
     }
 
     body,
@@ -123,6 +128,7 @@
         --font-weight-weight-2: Medium;
     }
 }
+
 @layer components {
 
     .site-header{
