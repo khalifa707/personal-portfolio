@@ -36,6 +36,7 @@
     body {
         min-block-size: 100vh;
         line-height: 1.6;
+        background-color: var(--colors-primary-color-500);
     }
 
     h1,
@@ -82,3 +83,85 @@
 
 }
 
+@layer base {
+    /* Premitives */
+    :root {
+        /* Mode 1 */
+        /* color */
+        --colors-primary-color-100: #dedede;
+        --colors-primary-color-200: #8e8e8e;
+        --colors-primary-color-300: #535353;
+        --colors-primary-color-400: #3c3c3c;
+        --colors-primary-color-500: #282828;
+        --colors-secondry-color-500: #aec6f6;
+        /* number */
+        --height-height-1: 0.5rem;
+        --height-height-2: 0.875rem;
+        --height-height-3: 1rem;
+        --height-height-4: 1.5rem;
+        --height-height-5: 2rem;
+        --height-height-6: 2.5rem;
+        --height-height-7: 3rem;
+        --size-size-1: 0.5rem;
+        --size-size-2: 0.875rem;
+        --size-size-3: 1rem;
+        --size-size-4: 1.5rem;
+        --size-size-5: 2rem;
+        --size-size-6: 2.5rem;
+        --size-size-7: 3rem;
+        --spacing-space-1: 0.5rem;
+        --spacing-space-2: 1rem;
+        --spacing-space-3: 1.5rem;
+        --spacing-space-4: 2rem;
+        --spacing-space-5: 2.5rem;
+        --spacing-space-6: 3rem;
+        --spacing-space-7: 5.5rem;
+        /* string */
+        --font-family-primary-font-family: Space Grotesk;
+        --font-family-secoundry-font-family: DM Mono;
+        --font-weight-weight-1: Bold;
+        --font-weight-weight-2: Medium;
+    }
+}
+
+@layer utilities {
+    .primary-text-header{
+        font-family: var(--font-family-primary-font-family), sans-serif;
+        font-weight: var(--font-weight-weight-2);
+        font-size: clamp(var(--size-size-4), 4vw, var(--size-size-6));
+        color: var(--colors-primary-color-300);
+        letter-spacing: -2.4px;
+        text-transform: capitalize;
+    }
+    .secondry-text-header{
+        font-family: var(--font-family-primary-font-family), sans-serif;
+        font-weight: var(--font-weight-weight-1);
+        font-size: clamp(var(--size-size-1), 3vw, var(--size-size-2));
+        color: var(--colors-primary-color-300);
+        letter-spacing: -0.84px;
+        text-transform: capitalize;
+    }
+    .secondry-text-sub-header{
+        font-family: var(--font-family-primary-font-family), sans-serif;
+        font-weight: var(--font-weight-weight-1);
+        font-size: clamp(var(--size-size-1), 3vw, var(--size-size-2));
+        color: var(--colors-secondry-color-500);
+        letter-spacing: -0.84px;
+    }
+    .tritary-text-header{
+        font-family: var(--font-family-primary-font-family), sans-serif;
+        font-weight: var(--font-weight-weight-1);
+        font-size: clamp(var(--size-size-1), 3vw, var(--size-size-2));
+        color: var(--colors-primary-color-400);
+        letter-spacing: -0.84px;
+        text-transform: capitalize;
+    }
+    .-primary-text-list{
+        font-family: var(--font-family-secoundry-font-family), monospace;
+        font-weight: var(--font-weight-weight-2);
+        font-size: clamp(var(--size-size-1), 3vw, var(--size-size-2));
+        color: var(--colors-primary-color-200);
+        letter-spacing: -0.32px;
+        text-transform: uppercase;
+    }
+}
