@@ -148,7 +148,15 @@
 
     .service-header{
         display: flex;
-        padding: var(--spacing-space-1);
+        padding: var(--spacing-space-1) 0;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-bottom: 1px solid var(--colors-primary-color-300);
+    }
+    .service-list{
+        display: flex;
+        padding: var(--spacing-space-1) 0;
         align-items: center;
         gap: 10px;
         align-self: stretch;
