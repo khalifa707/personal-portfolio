@@ -1,6 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrambleTextPlugin, SplitText);
 
+
+    gsap.fromTo(".hero-img-wrapper",
+        {
+            opacity: 0,
+            y: 30
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 2,
+            delay: 0.5,
+            ease: "power2.out"
+        }
+    );
+
     const scrambleElements = document.querySelectorAll(".scramble-text");
     const splitTextElements = document.querySelectorAll(".primary-text-header");
 
