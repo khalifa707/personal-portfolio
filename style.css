@@ -123,7 +123,19 @@
         --font-weight-weight-2: Medium;
     }
 }
+@layer components {
 
+    .site-header{
+        border-bottom: 2px solid var(--colors-primary-color-300);
+    }
+    .nav-wrapper{
+        display: inline-flex;
+        padding: clamp(var(--spacing-space-1), 1vw, var(--spacing-space-2));
+        align-items: center;
+
+        border-bottom: 3px solid var(--colors-secondry-color-500);
+    }
+}
 @layer utilities {
     .primary-text-header{
         font-family: var(--font-family-primary-font-family), sans-serif;
