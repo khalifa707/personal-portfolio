@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrambleTextPlugin, SplitText);
 
-
     gsap.fromTo(".hero-img-wrapper",
         {
             opacity: 0,

@@ -6,7 +6,6 @@
         box-sizing: border-box;
     }
 
-    /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
     html {
         -moz-text-size-adjust: none;
         -webkit-text-size-adjust: none;
@@ -31,7 +30,6 @@
         margin: 0;
     }
 
-    /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
     [role="list"] {
         list-style: none;
         margin: 0;
@@ -95,7 +93,6 @@
 @layer base {
     /* Premitives */
     :root {
-        /* Mode 1 */
         /* color */
         --colors-primary-color-100: #dedede;
         --colors-primary-color-200: #8e8e8e;
