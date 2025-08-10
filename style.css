@@ -164,4 +164,7 @@
         letter-spacing: -0.32px;
         text-transform: uppercase;
     }
+    .flow > * + * {
+        margin-block-start: clamp(var(--spacing-space-3), 2vw, var(--spacing-space-5));
+    }
 }
