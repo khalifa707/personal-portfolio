@@ -145,6 +145,16 @@
 
         border-bottom: 3px solid var(--colors-secondry-color-500);
     }
+
+    .service-header{
+        display: flex;
+        padding: var(--spacing-space-1);
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-bottom: 1px solid var(--colors-primary-color-300);
+    }
+
 }
 @layer utilities {
     .primary-text-header{
