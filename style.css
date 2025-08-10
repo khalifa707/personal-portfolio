@@ -196,13 +196,21 @@
         letter-spacing: -0.84px;
         text-transform: capitalize;
     }
-    .-primary-text-list{
+    .primary-text-list{
         font-family: var(--font-family-secoundry-font-family), monospace;
         font-weight: var(--font-weight-weight-2);
         font-size: clamp(var(--size-size-1), 3vw, var(--size-size-2));
         color: var(--colors-primary-color-200);
         letter-spacing: -0.32px;
         text-transform: uppercase;
+    }
+    .secondry-text-list{
+        font-family: var(--font-family-secoundry-font-family), monospace;
+        font-weight: var(--font-weight-weight-2);
+        font-size: clamp(var(--size-size-1), 3vw, var(--size-size-2));
+        color: var(--colors-primary-color-200);
+        letter-spacing: -0.32px;
+        text-transform: lowercase;
     }
     .flow > * + * {
         margin-block-start: clamp(var(--spacing-space-3), 2vw, var(--spacing-space-5));
