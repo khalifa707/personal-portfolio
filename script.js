@@ -1,7 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrambleTextPlugin);
+    gsap.registerPlugin(ScrambleTextPlugin, SplitText);
 
     const scrambleElements = document.querySelectorAll(".scramble-text");
+    const splitTextElements = document.querySelectorAll(".primary-text-header");
+
+    splitTextElements.forEach((el) => {
+        // Split text into lines
+        const splitText = new SplitText(el, { type: "lines" });
+        const lines = splitText.lines;
+
+        // Create mask container for each line
+        lines.forEach((line) => {
+            // Wrap each line in a container with overflow hidden
+            const wrapper = document.createElement("div");
+            wrapper.style.overflow = "hidden";
+            line.parentNode.insertBefore(wrapper, line);
+            wrapper.appendChild(line);
+
+            // Set initial state - lines start from below
+            gsap.set(line, { y: "100%" });
+        });
+
+        // Animate lines with stagger
+        gsap.to(lines, {
+            y: "0%",
+            duration: 1,
+            ease: "power3.out",
+            stagger: 0.1,
+            delay: 0.5
+        });
+    });
 
     scrambleElements.forEach((el) => {
         // Store the original text
@@ -12,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { scrambleText: { text: "▒▒▒▒▒▒▒▒▒▒▒▒", chars: "!<>-_\\/[]{}—=+*^?#________", speed: 0.5 } },
             {
                 scrambleText: { text: originalText, chars: "!<>-_\\/[]{}—=+*^?#________", speed: 0.5 },
-                duration: 1,
+                duration: 1.5,
                 ease: "none"
             }
         );
